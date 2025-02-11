@@ -96,3 +96,4 @@ Versão do NodeJS v14.15.0
 3. Inicie o projeto com o comando `yarn start` nas pastas `api` e `web`.
 4. Inicie o projeto com o comando `docker-compose up --build` na pasta raiz
 5. Execute o comando `bash scripts/startup.sh` na pasta raiz para persistir os dados do banco de dados.
+     
