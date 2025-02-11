@@ -3,12 +3,12 @@
 USER='root'
 PASS='password'
 HOST='127.0.0.1'
-DBASE='reimagined_spork'
+DBASE='potential_octo_adventure'
 
 mysql -u$USER -p$PASS -h$HOST << EOF
-    CREATE DATABASE IF NOT EXISTS reimagined_spork;
+    CREATE DATABASE IF NOT EXISTS potential_octo_adventure;
 
-    USE reimagined_spork;
+    USE potential_octo_adventure;
 
     CREATE TABLE heroes (
         id INT AUTO_INCREMENT PRIMARY KEY,

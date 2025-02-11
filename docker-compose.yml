@@ -35,7 +35,7 @@ services:
     image: mysql:8.0
     command: --default-authentication-plugin=mysql_native_password
     environment:
-      MYSQL_DATABASE: reimagined_spork
+      MYSQL_DATABASE: potential_octo_adventure
       MYSQL_USER: user
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
@@ -47,11 +47,11 @@ services:
     expose:
       - "3306"
     volumes:
-      - reimagined-spork:/var/lib/mysql
+      - potential_octo_adventure:/var/lib/mysql
 
 networks:
   net_app:
     driver: bridge
 
 volumes:
-  reimagined-spork:
+  potential_octo_adventure:
