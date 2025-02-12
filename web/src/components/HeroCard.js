@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/HeroCard.css";
+import "../styles/global.css";
 
 const HeroCard = ({ hero }) => (
     <div className="heroCard">

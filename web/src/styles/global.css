@@ -1,3 +1,5 @@
+/* src/styles/global.css */
+
 .App {
      display: flex;
      justify-content: center;
@@ -50,3 +52,50 @@
      display: flex;
    }
    
+.heroCard {
+     /* background-image: linear-gradient(rgb(81, 81, 206), black); */
+     background-image: white;
+     border-radius: 20px;
+     padding-bottom: 10px;
+     padding-top: 30px;
+     margin-inline: 15px;
+     text-align: center;
+   
+   }
+
+   .heroAvatar {
+     width: 150px;
+     height: 150px;
+     border-radius: 50%;
+   }
+
+   
+.heroImg {
+     max-width: 120px;
+     border-radius: 50%;
+     margin-inline: 50px;
+     background-color: white;
+   }
+   .heroAvatar {
+     width: 150px;
+     height: 150px;
+     border-radius: 50%;
+   }
+   
+   .heroesContainer {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+     flex-wrap: wrap;
+     margin-top: 20px;
+   }
+   
+   .error {
+     color: red;
+     font-weight: bold;
+     margin-top: 10px;
+   }
+
+   .heroesText{
+     color: black
+   }

@@ -3,8 +3,7 @@ import { getHeroes } from "../services/api";
 import HeroCard from "../components/HeroCard";
 
  // join the styles into a index and export to use here
-import "../styles/HeroCard.css";
-import "../styles/App.css";
+import "../styles/global.css";
 
 const HeroesList = () => {
     const [heroes, setHeroes] = useState([]);
