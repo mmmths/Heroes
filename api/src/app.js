@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 4000;
 app.use(cors());
 app.use(express.json());
 app.use("/heroes", heroesRoutes);
-app.use(errorHandler);
 
 app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
+
+app.use(errorHandler);

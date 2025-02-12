@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const { DB_HOST, DB_USER, DB_PASSWORD, DB_NAME } = process.env;
+
 if (!DB_HOST || !DB_USER || !DB_PASSWORD || !DB_NAME) {
   console.error("❌ Missing database environment variables. Check your .env file.");
   process.exit(1);
@@ -20,7 +21,7 @@ const pool = mysql.createPool({
   queueLimit: 0,
 });
 
-// Função para obter uma conexão do pool
+// conexão do pool
 export const getConnection = async () => {
   try {
     return await pool.getConnection();

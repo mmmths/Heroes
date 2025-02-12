@@ -1,18 +1,21 @@
 import { getConnection } from "../database.js";
 
-export const getHeroes = async (req, res) => {
+export const getHeroes = async (req, res, next) => {
   try {
     const connection = await getConnection();
     const [rows] = await connection.query("SELECT * FROM heroes");
-    connection.release(); 
+    connection.release();
 
     if (!rows.length) {
-      return res.status(404).json({ error: "No heroes found" });
+      const error = new Error("No heroes found");
+      error.status = 404;
+      return next(error);
     }
 
-    res.json(rows);
+    res.json({ success: true, data: rows });
   } catch (error) {
-    console.error("❌ Error fetching heroes:", error);
-    res.status(500).json({ error: "Internal Server Error" });
+    error.status = 500;
+    error.message = "Error fetching heroes";
+    return next(error);
   }
 };
